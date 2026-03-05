@@ -106,7 +106,7 @@ export default function Navigation() {
         </div>
       </div>
 
-      <div className={`bg-white transition-all duration-300 ${isScrolled ? 'shadow-md' : ''}`}>
+      <div className={`bg-padula-navy-900 transition-all duration-300 ${isScrolled ? 'shadow-md' : ''}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 lg:h-20">
             <button
@@ -123,13 +123,13 @@ export default function Navigation() {
                   onClick={() => scrollToSection(link.id)}
                   className={`px-6 py-2 font-semibold text-base transition-colors relative group uppercase tracking-wide ${
                     activeSection === link.id
-                      ? 'text-padula-700'
-                      : 'text-gray-700 hover:text-padula-700'
+                      ? 'text-white'
+                      : 'text-gray-300 hover:text-white'
                   }`}
                 >
                   {link.label}
                   <span
-                    className={`absolute bottom-0 left-0 w-full h-0.5 bg-padula-700 transform origin-left transition-transform ${
+                    className={`absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left transition-transform ${
                       activeSection === link.id ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                     }`}
                   />
@@ -137,13 +137,25 @@ export default function Navigation() {
               ))}
             </div>
 
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
-              aria-label="Toggle menu"
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+            <div className="lg:hidden flex items-center gap-3">
+              <div className="flex items-center gap-3">
+                <a href="tel:+4967635569411" className="flex items-center gap-1.5 text-white hover:text-padula-300 transition-colors">
+                  <Phone className="w-4 h-4 text-padula-400 flex-shrink-0" />
+                  <span className="text-xs font-medium sm:text-sm">(06763) 5569411</span>
+                </a>
+                <a href="tel:+491706146733" className="flex items-center gap-1.5 text-white hover:text-padula-300 transition-colors hidden sm:flex">
+                  <Smartphone className="w-4 h-4 text-padula-400 flex-shrink-0" />
+                  <span className="text-xs font-medium sm:text-sm">(0170) 6146733</span>
+                </a>
+              </div>
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="p-2 rounded-lg hover:bg-padula-navy-800 transition-colors text-white"
+                aria-label="Toggle menu"
+              >
+                {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>
+            </div>
           </div>
         </div>
       </div>
