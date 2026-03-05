@@ -106,15 +106,27 @@ export default function Navigation() {
         </div>
       </div>
 
-      <div className={`bg-white transition-all duration-300 ${isScrolled ? 'shadow-md' : ''}`}>
+      <div className={`bg-padula-navy-900 lg:bg-white transition-all duration-300 ${isScrolled ? 'shadow-md' : ''}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 lg:h-20">
-            <button
-              onClick={() => scrollToSection('home')}
-              className="flex items-center group lg:hidden"
-            >
-              <Logo size="md" showText={true} />
-            </button>
+            <div className="flex items-center space-x-4 lg:hidden">
+              <button
+                onClick={() => scrollToSection('home')}
+                className="flex items-center group"
+              >
+                <Logo size="md" showText={true} />
+              </button>
+              <div className="flex items-center divide-x divide-white/30 text-white">
+                <a href="tel:+4967635569411" className="flex items-center space-x-1.5 pr-3 hover:text-padula-300 transition-colors">
+                  <Phone className="w-3.5 h-3.5 text-padula-400 flex-shrink-0" />
+                  <span className="text-xs font-semibold">(06763) 5569411</span>
+                </a>
+                <a href="tel:+491706146733" className="flex items-center space-x-1.5 pl-3 hover:text-padula-300 transition-colors">
+                  <Smartphone className="w-3.5 h-3.5 text-padula-400 flex-shrink-0" />
+                  <span className="text-xs font-semibold">(0170) 6146733</span>
+                </a>
+              </div>
+            </div>
 
             <div className="hidden lg:flex items-center space-x-1 flex-1">
               {navLinks.map((link) => (
@@ -139,7 +151,7 @@ export default function Navigation() {
 
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              className="lg:hidden p-2 rounded-lg hover:bg-white/10 transition-colors text-white"
               aria-label="Toggle menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

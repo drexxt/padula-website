@@ -266,7 +266,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <section id="home" className="relative bg-gradient-to-br from-padula-navy-900 via-padula-navy-800 to-padula-900 text-white pt-32 pb-20 lg:pt-48 md:pb-28">
-        <div className="absolute inset-0 bg-[url('/Padula_Fuhrpark.jpg')] bg-cover bg-center opacity-50" />
+        <div className="absolute inset-0 bg-[url('/Padula_Fuhrpark.png')] bg-cover bg-center opacity-50" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
