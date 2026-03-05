@@ -106,7 +106,7 @@ export default function Navigation() {
         </div>
       </div>
 
-      <div className={`bg-padula-navy-900 transition-all duration-300 ${isScrolled ? 'shadow-md' : ''}`}>
+      <div className={`bg-padula-navy-900 lg:bg-white transition-all duration-300 ${isScrolled ? 'shadow-md' : ''}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 lg:h-20">
             <button
@@ -123,13 +123,13 @@ export default function Navigation() {
                   onClick={() => scrollToSection(link.id)}
                   className={`px-6 py-2 font-semibold text-base transition-colors relative group uppercase tracking-wide ${
                     activeSection === link.id
-                      ? 'text-white'
-                      : 'text-gray-300 hover:text-white'
+                      ? 'text-padula-700'
+                      : 'text-gray-700 hover:text-padula-700'
                   }`}
                 >
                   {link.label}
                   <span
-                    className={`absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left transition-transform ${
+                    className={`absolute bottom-0 left-0 w-full h-0.5 bg-padula-700 transform origin-left transition-transform ${
                       activeSection === link.id ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
                     }`}
                   />
