@@ -1,0 +1,8 @@
+# robots.txt for Padula Innenausbau
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.padula-innenausbau.eu/sitemap.xml
